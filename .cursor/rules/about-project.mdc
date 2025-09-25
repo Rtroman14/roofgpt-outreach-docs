@@ -1,0 +1,90 @@
+---
+description: RoofGPT Email Outreach System Documentation
+globs:
+alwaysApply: false
+---
+
+## Overview
+
+The **RoofGPT Email Outreach System** is a one-time, end-to-end implementation for commercial roofing contractors focused on generating qualified leads for their commercial division. We install a complete cold email engine that consistently reaches property owners, decision-makers, and facility managers at scale. The system uses multiple lookalike domains, warmed inboxes, proven messaging frameworks, and automated multi-step campaigns to book inspections and produce qualified commercial opportunities. After implementation, clients own the system outright with no recurring fees.
+
+## Purpose
+
+This documentation is created so that RoofGPT clients can:
+
+-   Understand the components of the outreach system.
+-   Learn how to operate the system day-to-day without needing live support.
+-   Configure and add new email domains as needed.
+-   Troubleshoot deliverability, campaign performance, and inbox management.
+-   Reference best practices for prospecting, outreach cadence, and compliance.
+
+## Key Features of the Implementation
+
+1. **Domain Setup & Warmup**
+
+    - Purchase lookalike sending domains to protect the client’s primary domain reputation.
+    - Provision Google Workspace accounts for all new domains.
+    - Configure DNS (SPF, DKIM, DMARC) for each domain to ensure authentication and deliverability.
+    - Warm new inboxes for ~3–4 weeks before any production sending.
+
+2. **Email Infrastructure**
+
+    - Dedicated inboxes for outreach campaigns.
+    - Forwarding and lead-routing rules to ensure responses reach the right sales reps.
+
+3. **Instantly Configuration & Campaigns**
+
+    - Connect all new inboxes to Instantly for warmup and campaign management.
+    - Implement A/B testing for subject lines and email bodies.
+    - Define daily sending limits, spacing, and ramp schedules aligned to warmup status.
+    - Provide best practices for copywriting, personalization, and follow-up cadence.
+    - Maintain sequence libraries optimized for commercial roofing.
+
+4. **Prospect Database (Airtable)**
+
+    - Airtable base for storing prospects, responses, and campaign metadata.
+    - Example fields: First Name, Last Name, Email, Phone, Street, City, State, Zip, Building Type, Year Built, Status, Tag, Source, Follow-up Date, Response, Response Date.
+    - Dashboard views and reports (KPIs, response rates, positive replies, booked meetings).
+
+5. **Automations & Data Quality**
+
+    - NeverBounce (or equivalent) to validate emails on ingest.
+    - AI agent to classify inbound replies (e.g., Positive, Referral, Not Interested, OOO).
+    - Automations to assign validated prospects to the correct Instantly campaign.
+
+6. **Lead Sources & Scraping**
+
+    - Initial source: Reonomy. User provides a Reonomy list link; scraper ingests prospects into Airtable.
+    - Planned expansion to additional sources over time.
+
+7. **Training, Analytics & Ownership**
+
+    - Campaign analytics surfaced in Airtable dashboards.
+    - Clients receive full system ownership post-implementation.
+    - Documentation provides step-by-step guidance for future adjustments and scaling.
+
+## Implementation Flow (High-level)
+
+1. Purchase lookalike domains; set up Google Workspace accounts.
+2. Configure SPF, DKIM, and DMARC for each domain.
+3. Connect inboxes to Instantly and start warmup (3–4 weeks).
+4. Build and enable A/B-tested sequences with conservative sending limits during warmup.
+5. Set up Airtable base, tables, and views; enable dashboards.
+6. Configure automations: NeverBounce validation, AI reply classification, and campaign assignment.
+7. Add lead sources (begin with Reonomy link); scraper loads prospects to Airtable.
+8. As campaigns run, all replies are logged in Airtable, classified by AI, and routed to sales.
+
+## Deliverables
+
+-   Fully configured cold email outreach system within **5 business days**.
+-   Lookalike domains, Google Workspace inboxes, and DNS (SPF/DKIM/DMARC) configured.
+-   Instantly workspace with connected warmed inboxes and A/B-tested campaign sequences.
+-   Airtable base with tables, views, dashboards, and automations (NeverBounce, AI classification, campaign routing).
+-   Reonomy ingestion workflow and scraper configured to load Airtable automatically.
+-   Documentation portal with best practices for copy, sending limits, and maintenance.
+-   Training on domain management, sequences, dashboards, and interpreting results.
+-   Optional monthly management services available if client prefers hands-off execution.
+
+## Value Proposition
+
+The RoofGPT Email Outreach System eliminates reliance on storm events, referrals, or paid ads by creating a **predictable, repeatable pipeline** for commercial roofers. With one successful commercial job often worth \$25k+, the system can pay for itself with a single deal. Roofers gain a long-term asset they own and control, rather than renting leads from agencies or directories.

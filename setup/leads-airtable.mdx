@@ -1,0 +1,47 @@
+---
+title: "Step 3 — Leads & Airtable"
+description: "Load prospects, validate emails, and auto-assign to campaigns."
+---
+
+## Prerequisites
+
+-   Airtable base access
+-   NeverBounce (or equivalent) access
+
+<Steps>
+<Step title="Open the Airtable base">
+  - Use the shared link in your onboarding email.
+  <Check>You can view the `Prospects` table.</Check>
+</Step>
+
+<Step title="Add a Reonomy link or import CSV">
+    - Paste your Reonomy list link for ingestion, or - Import a CSV with required columns: First
+    Name, Last Name, Email, City, State, Building Type.
+    <Frame>
+        <img src="/images/hero-light.png" alt="Placeholder Airtable import screenshot" />
+    </Frame>
+    <Check>New rows appear in `Prospects` with Status = New.</Check>
+</Step>
+
+<Step title="Validate emails with NeverBounce">
+    - Run validation on new records. - Reject invalid or unknown addresses.
+    <Check>Validation column shows Valid for sending records.</Check>
+</Step>
+
+<Step title="Auto-assign to Instantly campaigns">
+  - Ensure the automation is enabled.
+  - Each Valid prospect routes to the right campaign.
+  <Check>Campaign field is populated and sync status is OK.</Check>
+</Step>
+</Steps>
+
+## Troubleshooting
+
+<AccordionGroup>
+    <Accordion title="CSV import errors">
+        - Ensure headers match required names. - Save as UTF-8 CSV and retry.
+    </Accordion>
+    <Accordion title="Validation stuck or slow">
+        - Reduce batch size. - Retry during off-peak hours.
+    </Accordion>
+</AccordionGroup>

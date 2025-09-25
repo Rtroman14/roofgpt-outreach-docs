@@ -1,0 +1,86 @@
+---
+title: "Step 2 — Instantly setup"
+description: "Connect inboxes, warm accounts, build sequences, and prepare to launch."
+---
+
+## Prerequisites
+
+-   [Instantly Outreach Hypergrowth Plan](https://instantly.ai/?via=roofgpt)
+-   Google Workspace inboxes created
+-   SPF, DKIM, DMARC configured (see [Step 1 — Email setup](/setup/email-setup))
+
+<Steps>
+<Step title="Connect each inbox in Instantly">
+  1. Open [Instantly Accounts](https://app.instantly.ai/app/accounts).
+  2. Click **Add New**.
+  3. Under **Connect existing accounts**, choose Google authentication.
+  4. Select **Option 1 — OAuth**.
+  5. **Configure new app** — follow the steps (once per domain).
+  
+  - Connect every inbox and complete authentication.
+  <Frame>
+  <img src="/images/roofgpt-instantly-add-email.png" alt="Instantly Accounts view" />
+  </Frame>
+</Step>
+
+<Step title="Start warmup and set account defaults">
+- Set your email signature for each account. 
+- Enable **Campaign slow ramp**.
+- Leave all other settings at their default values.
+- Enable inbox warmup for each connected account.
+
+<Frame>
+    <img
+        src="/images/roofgpt-instantly-warming.png"
+        alt="Instantly warmup settings with signature and slow ramp"
+    />
+</Frame>
+
+<Note>Warm for 3–4 weeks to build domain reputation so emails avoid spam.</Note>
+<Warning>Do not launch cold campaigns until inboxes have warmed for 3–4 weeks.</Warning>
+</Step>
+
+<Step title="Create your first campaign">
+- Go to [Instantly Campaigns](https://app.instantly.ai/app/campaigns) and click **Add New**.
+- Open the **Sequences** tab and build your sequence (recommend at least 4 emails).
+- Set **Send next message in** to **3 days** for proper spacing between touches.
+- **Add variant** to A/B test subject lines and body copy.
+
+<Tip>
+    See <a href="/setup/campaigns-best-practices">Campaigns best practices</a> for proven sequences
+    and copy.
+</Tip>
+
+<Frame>
+    <img
+        src="/images/roofgpt-instantly-email-squence.png"
+        alt="Instantly email sequence"
+    />
+</Frame>
+</Step>
+
+<Step title="Set your schedule">
+- In the **Schedule** tab, choose sending days and a business-hours window.
+
+<Frame>
+    <img src="/images/roofgpt-instantly-schedule.png" alt="Instantly campaign schedule settings" />
+</Frame>
+
+</Step>
+
+<Step title="Configure options and prepare to launch">
+- In the **Options** tab, select the accounts that should send for this campaign.
+- Set **Open Tracking** to **Disable** (improves deliverability).
+- Under **Delivery Optimization**, check **Send emails as text only (no HTML)**.
+- Leave remaining options at their default values.
+
+<Frame>
+    <img
+        src="/images/roofgpt-instantly-options.png"
+        alt="Instantly campaign options showing text-only and tracking disabled"
+    />
+</Frame>
+
+<Warning>Click **Launch** only after accounts have warmed for 3–4 weeks.</Warning>
+</Step>
+</Steps>

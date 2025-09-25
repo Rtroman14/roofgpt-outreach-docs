@@ -1,0 +1,33 @@
+---
+title: "Fix — Email problems"
+description: "Quick fixes for send failures, high bounces, or spam placement."
+---
+
+<AccordionGroup>
+<Accordion title="Can’t send emails">
+  - Check inbox connection in Instantly; re-auth if needed
+  - Verify SPF/DKIM/DMARC still passing
+  - Ensure daily caps not exceeded
+  <Check>Sending resumes without errors.</Check>
+</Accordion>
+
+<Accordion title="High bounce rate (≥ 3%)">
+    - Pause the affected campaign immediately - Re-validate the last imported leads; remove bad
+    records - Lower daily caps for 72 hours, then resume
+    <Warning>Continuing to send with high bounces hurts deliverability.</Warning>
+    <Check>Bounce rate returns below 3% for 3 consecutive days.</Check>
+</Accordion>
+
+<Accordion title="Landing in spam">
+  - Reduce daily caps and slow ramp
+  - Swap subject/body variant; remove spammy words
+  - Verify sending from multiple warmed inboxes
+  <Check>Open rate improves and spam folder checks decline.</Check>
+</Accordion>
+</AccordionGroup>
+
+## When to escalate
+
+-   Authentication failing for > 24h
+-   Multiple domains hit spam simultaneously
+-   Bounce rate > 5% after list cleanup
