@@ -19,9 +19,19 @@
                             "index",
                             "setup/email-setup",
                             "setup/instantly-setup",
-                            "setup/campaigns-best-practices",
                             "setup/leads-airtable",
                             "setup/launch"
+                        ]
+                    },
+                    {
+                        "group": "Campaigns",
+                        "pages": [
+                            "campaigns/index",
+                            "campaigns/email-anatomy",
+                            "campaigns/subject-lines",
+                            "campaigns/sequence-templates",
+                            "campaigns/launch-and-scaling",
+                            "campaigns/best-practices"
                         ]
                     }
                 ]
@@ -48,14 +58,9 @@
         "global": {
             "anchors": [
                 {
-                    "anchor": "Documentation",
-                    "href": "https://mintlify.com/docs",
-                    "icon": "book-open-cover"
-                },
-                {
-                    "anchor": "Blog",
-                    "href": "https://mintlify.com/blog",
-                    "icon": "newspaper"
+                    "anchor": "Custom GPT",
+                    "href": "https://chatgpt.com/g/g-68d6b379b2908191ac1d4f5cc022bb2f-cold-email-for-commercial-roofing",
+                    "icon": "robot"
                 }
             ]
         }
@@ -70,7 +75,12 @@
                 "label": "Support",
                 "href": "mailto:ryan@roofgpt.ai"
             }
-        ]
+        ],
+        "primary": {
+            "type": "button",
+            "label": "Custom GPT",
+            "href": "https://chatgpt.com/g/g-68d6b379b2908191ac1d4f5cc022bb2f-cold-email-for-commercial-roofing"
+        }
     },
     "contextual": {
         "options": ["copy", "view", "chatgpt"]
@@ -80,6 +90,7 @@
     },
     "footer": {
         "socials": {
+            "website": "https://leads.roofgpt.ai",
             "facebook": "https://www.facebook.com/roofgpt",
             "linkedin": "https://www.linkedin.com/company/roofgpt"
         }

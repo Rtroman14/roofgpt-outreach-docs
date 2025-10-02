@@ -1,0 +1,64 @@
+---
+title: "Launch & scaling"
+description: "How to launch sequences safely and scale volume without hurting deliverability."
+---
+
+## Launch schedule
+
+-   Day 1: 5 cold emails/day
+-   Day 5: 10/day
+-   Day 10: 15/day
+-   Day 15: 20/day
+-   Day 20: 25 cold + 25 warmup = 50/day
+
+## Rules
+
+1. Never exceed 50/day/account
+2. Increase gradually; only scale if open rate healthy and warmup ≥ 98%
+3. If results dip → pause cold for 1–2 weeks and run warmup only
+4. Add new domains/accounts to scale beyond 50/day
+
+<Check>Campaigns scheduled during business hours; caps configured; variants set.</Check>
+
+---
+
+## Pre‑flight checklist (before launch)
+
+-   ✅ SPF, DKIM, DMARC passing
+-   ✅ Inboxes warmed ≥ 2 weeks (prefer 3–4)
+-   ✅ Lead list verified (bounces < 2%)
+-   ✅ Tracking domain owned and warmed (if using tracking)
+-   ✅ Sending domains point to a real website
+
+## Daily volumes and ratios
+
+-   Keep ~50 total emails per account/day (includes warmup)
+-   Start 25 cold + 25 warmup
+-   Adjust ratio based on deliverability:
+    -   If performance drops → 15 cold / 35 warmup or pause cold for 1–2 weeks
+    -   If strong → 30 cold / 20 warmup and reassess
+
+---
+
+## Deliverability guardrails
+
+### Do this
+
+-   Plain‑text emails; avoid images and links in Email 1
+-   Rotate inboxes; keep 3–5 inboxes per domain
+-   Disable open tracking; focus on replies and meetings
+-   Use light spintax to vary phrasing (avoid heavy templating)
+-   Run frequent checks with tools like Glockapps
+
+### Avoid this
+
+-   Spam trigger words and emoji spam
+-   Over‑sending (> 50/day/account)
+-   Unverified lists (bounces ≥ 3%)
+-   Copy‑pasted rich text with hidden HTML
+
+### Metrics to monitor
+
+-   Reply rate, positive replies, meetings booked, revenue
+-   Bounce rate < 2%
+-   Warmup health ≥ 98%
