@@ -1,47 +1,97 @@
 ---
 title: "Step 3 — Leads & Airtable"
-description: "Load prospects, validate emails, and auto-assign to campaigns."
+description: "Add Reonomy URLs, scrape properties, validate emails, and upload to campaigns."
 ---
+
+<Info>
+    This workflow connects Reonomy property data → validated contacts → Instantly campaigns
+    automatically.
+</Info>
 
 ## Prerequisites
 
 -   Airtable base access
--   NeverBounce (or equivalent) access
+-   Reonomy account with target area selected
 
 <Steps>
-<Step title="Open the Airtable base">
-  - Use the shared link in your onboarding email.
-  <Check>You can view the `Prospects` table.</Check>
-</Step>
+    <Step title="Add Reonomy URL to Lead Sources">
+        - Navigate to the **Lead Sources** table in your Airtable base.
+        - Click **Create new...** to add a row.
+        - In Reonomy, set your filters (target area, building type, property criteria).
+        - Copy the Reonomy search URL from your browser.
+        - Paste the URL into the **Target URL** field in the new Lead Sources row.
+    
+        <Frame>
+            <img src="/images/roofgpt-lead-sources.png" alt="Lead Sources table with Reonomy URL" />
+        </Frame>
+        
+        <Check>Target URL is saved in the Lead Sources table.</Check>
+    </Step>
 
-<Step title="Add a Reonomy link or import CSV">
-    - Paste your Reonomy list link for ingestion, or - Import a CSV with required columns: First
-    Name, Last Name, Email, City, State, Building Type.
-    <Frame>
-        <img src="/images/hero-light.png" alt="Placeholder Airtable import screenshot" />
-    </Frame>
-    <Check>New rows appear in `Prospects` with Status = New.</Check>
-</Step>
+    <Step title="Scraping and validation (automated)">
+        Once your Reonomy URL is added, the backend system will:
+        - Scrape all properties from your Reonomy link
+        - Populate the **Contacts**, **Properties**, and **Property Owners** tables
+        - Automatically validate email addresses using NeverBounce
+        - Update contact Status to **Validated Emails** for valid addresses
 
-<Step title="Validate emails with NeverBounce">
-    - Run validation on new records. - Reject invalid or unknown addresses.
-    <Check>Validation column shows Valid for sending records.</Check>
-</Step>
+        <Frame>
+            <img
+                src="/images/roofgpt-contacts-validated.png"
+                alt="Contacts table showing validated records"
+            />
+        </Frame>
 
-<Step title="Auto-assign to Instantly campaigns">
-  - Ensure the automation is enabled.
-  - Each Valid prospect routes to the right campaign.
-  <Check>Campaign field is populated and sync status is OK.</Check>
-</Step>
+        <Note>
+            This process is handled automatically. Contact support if you don't see contacts appear
+            within 24 hours.
+        </Note>
+
+        <Check>Contacts appear in the Validated Emails view with valid email addresses.</Check>
+    </Step>
+
+    <Step title="Assign contacts to campaign">
+        - Open Instantly and navigate to your campaign.
+        - Copy the **campaign ID** from the URL bar.
+
+        <Frame>
+            <img
+                src="/images/roofgpt-instantly-campaign-url.png"
+                alt="Instantly campaign URL with ID highlighted"
+            />
+        </Frame>
+
+        - Navigate to the **Campaigns** table in Airtable.
+        - Add or update the campaign record with the Instantly campaign ID.
+
+        <Frame>
+            <img src="/images/roofgpt-airtable-instantly-campaign-id.png" alt="Campaigns table with campaign ID" />
+        </Frame>
+
+        - Return to the **Contacts** table and switch to the **Validated Emails** view.
+        - Update the **Campaign** column for contacts to point to your campaign.
+
+        <Frame>
+            <img
+                src="/images/roofgpt-contacts-assign-campaign.png"
+                alt="Contacts table with campaign assignment"
+            />
+        </Frame>
+        <Check>Campaign field is populated for all contacts ready for outreach.</Check>
+    </Step>
+
+    <Step title="Upload contacts to Instantly">
+        - Navigate to the **Actions** table.
+        - Click the **Upload contacts to Instantly** action button.
+        - The system uploads all campaign-assigned contacts to their corresponding Instantly campaigns.
+
+        <Frame>
+            <img src="/images/roofgpt-actions-upload-instantly.png" alt="Actions table with upload button" />
+        </Frame>
+
+        <Check>Contacts appear in your Instantly campaign ready to send.</Check>
+    </Step>
+
 </Steps>
 
 ## Troubleshooting
-
-<AccordionGroup>
-    <Accordion title="CSV import errors">
-        - Ensure headers match required names. - Save as UTF-8 CSV and retry.
-    </Accordion>
-    <Accordion title="Validation stuck or slow">
-        - Reduce batch size. - Retry during off-peak hours.
-    </Accordion>
-</AccordionGroup>
